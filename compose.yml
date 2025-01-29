@@ -16,7 +16,7 @@ services:
     depends_on:
       - database
     build:
-      context: ./RideOrCry
+      context: ./RideOrCry-Backend
       dockerfile: Dockerfile
     container_name: "RideOrCry-SERVER"
     environment:
@@ -28,7 +28,7 @@ services:
 
   client:
     build:
-      context: ./Front-End
+      context: ./RideOrCry-Frontend
       dockerfile: Dockerfile
     container_name: "RideOrCry-CLIENT"
     environment:
