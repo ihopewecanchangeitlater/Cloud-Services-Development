@@ -11,6 +11,8 @@ Clone the repository to your local machine:
 ```sh
 git clone https://github.com/ihopewecanchangeitlater/Cloud-Services-Development
 cd Cloud-Services-Development
+git submodule init
+git submodule update
 ```
 
 ## Start the Application
