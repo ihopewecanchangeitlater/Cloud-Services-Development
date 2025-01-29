@@ -43,6 +43,15 @@ To remove the containers and associated volumes:
 docker-compose down -v
 ```
 
+## Update Submodules
+To update submodules to latest changes, run:
+```sh
+git submodule update --remote
+git add .
+git commit -m "git submodule updated"
+git push origin
+```
+
 ## Troubleshooting
 - Ensure ports 8080 and 5432 are available on your machine.
 - Run `docker compose logs` to check logs if the application fails to start.
