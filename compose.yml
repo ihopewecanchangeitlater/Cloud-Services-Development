@@ -1,0 +1,40 @@
+version: "3"
+services:
+  database:
+    image: "postgres:16.4-alpine"
+    container_name: "RideOrCry-DB"
+    environment:
+      POSTGRES_DB: ride_or_cry_db
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  server:
+    depends_on:
+      - database
+    build:
+      context: ./RideOrCry
+      dockerfile: Dockerfile
+    container_name: "RideOrCry-SERVER"
+    environment:
+      DATABASE_URL: jdbc:postgresql://database:5432/ride_or_cry_db
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: password
+    ports:
+      - "8080:8080"
+
+  client:
+    build:
+      context: ./Front-End
+      dockerfile: Dockerfile
+    container_name: "RideOrCry-CLIENT"
+    environment:
+      - REACT_APP_API_BASE_URL=http://127.0.0.1:8080
+    ports:
+      - "3000:80"
+
+volumes:
+  postgres_data:

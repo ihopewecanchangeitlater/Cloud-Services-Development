@@ -1,0 +1,7 @@
+[submodule "RideOrCry-Backend"]
+    path=RideOrCry
+    url=https://github.com/ihopewecanchangeitlater/RideOrCry-Backend
+
+[submodule "RideOrCry-Frontend"]
+    path=Front-End
+    url=https://github.com/ihopewecanchangeitlater/RideOrCry-Frontend
