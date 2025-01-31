@@ -56,5 +56,8 @@ git push origin
 - Ensure ports 8080 and 5432 are available on your machine.
 - Run `docker compose logs` to check logs if the application fails to start.
 
+## Video
+[Ride or Cry]](https://youtu.be/-YudLKLcTu0)
+
 ---
 Developed with ❤️ by RideOrCry Team
