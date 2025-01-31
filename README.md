@@ -57,7 +57,7 @@ git push origin
 - Run `docker compose logs` to check logs if the application fails to start.
 
 ## Video
-[Ride or Cry]](https://youtu.be/-YudLKLcTu0)
+[Ride or Cry](https://youtu.be/-YudLKLcTu0)
 
 ---
 Developed with ❤️ by RideOrCry Team
